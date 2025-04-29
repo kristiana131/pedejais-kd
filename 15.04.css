@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f0fff0;
+  }
+  
+  #game-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: #c2f0c2;
+    border: 3px solid #4CAF50;
+    overflow: hidden;    text-align: center;
+  }
+  
+  #basket {
+    position: absolute;
+    bottom: 10px;
+    width: 80px;
+    height: 40px;
+    background-color: #8B4513;
+    left: 260px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .egg {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #fffacd;
+    border-radius: 50%;
+    border: 2px solid #ff69b4;    text-align: center;
+  }
+  
+  #info {
+    margin-top: 20px;    text-align: center;
+  }

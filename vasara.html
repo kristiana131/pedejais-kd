@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="stylesheet" href="style.css">
+   
+    <link rel="stylesheet" href="registracija.css">
+    
+</head>
+<body>
+  
+    <h1 style="text-align: center ;"> Kā es pavadīju savu vasaru.</h1>
+    <div>
+
+        <div id="container">
+            <nav>
+                <ul>
+                    <li><a href="vasara.html">Home</a>
+                    <li><a href="10.12.html">Eglīte</a></li>
+                   
+                    
+                   
+                    </li>
+                    <li><a href="poga.html">Poga</a>
+                    <!-- First Tier Drop Down -->
+                    <ul>
+                        <li><a href="akmens.html">mini spēle</a></li>
+                        <li><a href="daramo_darbu_saraksts.html">Darāmo darbun saraksts</a></li>
+                        <li><a href="04.03.html">Saziņa</a>
+                        <!-- Second Tier Drop Down -->
+                        <ul>
+                            <li><a href="25.03.html">Viktorīna</a></li>
+                            <li><a href="21.01.html">Uzmini skaitli</a></li>
+                            <li><a href="15.04.html">Lieldienu spēle</a>
+                                <!-- Third Tier Drop Down -->
+                                <ul>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href="krasas.html">Krāsu maiņa</a></li>
+                    <li><a href="atkartojums.html">Formas</a></li>
+                    <li><a href="kalkulatros.html">Kalkulators</a></li>
+                   
+                    <li><a href="registracija.html">Reģistrēties</a></li>
+          
+                </ul>
+            </nav>
+          
+          </ul>
+          </nav>
+          </div>
+          
+          
+</div>
+
+    <style>
+        body {background-color: rgb(255, 206, 243);}
+        h1   {color: rgb(52, 54, 51)}
+        h2   {color:rgb(52, 54, 51) }
+        h2{ font-style: italic;}
+        h3{ color:rgb(52, 54, 51) ;}
+       h1{font-size:50px;}
+        h3{font-style: italic;}
+        h3{font-size: 30px;}
+        h2{font-size: 30px;}
+        h4{font-size: 30px;}
+        h4{font-style: italic;}
+        h4{color: rgb(52, 54, 51);}
+     li {font-style:italic;}
+     li {color:rgb(52, 54, 51);}
+     li{font-size: 25px;}
+
+        img{
+            width: 400px;;
+            height: 300px;
+        }
+       
+a {
+	color: #FFF;
+}
+
+#container {
+	margin: 0 auto;
+}
+
+nav {
+	margin: 50px 0;
+	background-color: #b39ce9;
+}
+
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+	background-color: hsl(281, 35%, 75%);
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+nav a:hover { 
+	background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; /* the height of the main nav */
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:170px;
+}
+	
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+    </style>
+<div style="display: flex;">
+
+<div style="text-align: center;">
+<img src="cycling-101-featured.png" > 
+<h2>Vasarā kopā ar draugiem <br>
+    daudz
+    braukājam ar riteņiem! </h2>
+</div>
+
+
+<div style="text-align: center;">
+<img src="sunset.jpg">
+<h3>Ar draugiem un ģimeni <br> gājām uz jūru!</h3>
+</div>
+<div>
+<img src="roadtrip.jpg">
+<h4>Braucām dažādās ekskursijās!</h4>
+</div>
+
+   
+
+
+
+</div>
+ <script>
+function a(){
+    document.getElementById("Div").style.backgroundColor="gray";
+}
+
+
+
+ </script>
+</body>
+
+</html>

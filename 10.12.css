@@ -1,0 +1,81 @@
+
+body {
+    margin: 0;/*Noņem noklusējuma piemales ap korpusu*/
+    background: linear-gradient(to bottom, #001d3d, #003566);/*Izveido norādīto fona krāsu*/
+    font-family: Arial, sans-serif;/*Iestata teksta fontu uz Arial vai noklusējuma sans-serif*/
+    height: 100vh;/*Liek aizņemt visu skata loga augstumu*/
+  } 
+  
+  .container { 
+    display: flex;/*Aktivizē Flexbox izkārtojumam*/
+    justify-content: center; /*Centrē visas lietas horizontāli*/
+    align-items: center;/*Centrē visas lietas vertikāli*/
+    flex-direction: column;/*Saliek pakārtotos elementus vertikāli.*/
+    
+  }
+
+  .shooting-star {
+    position: absolute;/*Novieto krītošo zvaigzni attiecībā pret tuvāko novietoto */
+    top: 0;/* Sāk zvaigzne krist nedaudz ārpus ekrāna*/
+    left: -120px;
+    width: 120px;
+    height: 2px;
+    background: url(...) center center no-repeat;/*Pievieno krītošo zvaigzni kā fona bildi*/
+    background-size: 100% 100%;
+    transform: rotate(20deg);
+    animation: 10s falling-star 0.2s infinite;/*Krītošās zvaigznes animāciju liek atkārtoti lietot ar 10s ilgumu un 2s aizkavēšanos*/
+  }
+  @keyframes falling-star {
+    0% {/*Zvaigzne sāk pilnībā redzēt tās sākotnējā stāvoklī.*/
+      transform: translate3d(0, 0, 0) rotate(10deg);
+      opacity: 1;
+    }
+    25%, 100% {/*Pārvieto zvaigzni pāri ekrānam, vienlaicīgi tai lēnām izzūdot*/
+      transform: translate3d(100vw, 30vh, 0) rotate(10deg);
+      opacity: 0;
+    }
+  }
+  .tree {
+    position: absolute;/*Novieto eglīti ekrāna apakšā*/
+    bottom: 10px;
+    width: 50%;
+    max-width: 400px;/*Iestata koku uz pusi no ekrāna platuma, bet ne lielāku par 400 pikseļiem*/
+    height: auto;
+    z-index: 1;/*Novieto koku zem augstākas prioritātes elementiem*/
+  }
+  .snow-hill {
+    position: absolute;/*Novieto sniegaq kalnu apaksā*/
+    width: 100%;/*Nodrošina, ka kalns atveras visa ekrāna plašumā*/
+    bottom: 0;
+  }
+  .wish {
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;/*Izveido virsrakstu lielu*/
+    font-family: Cursive, Arial, sans-serif;
+    color: #fff; /*Maina virsraksta krāsu uz baltu*/
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff3333, 0 0 20px #ff6666;/*Izveido tekstam spīdošo effektu ar sarkanu nokrāsu */
+    animation: sparkle 2s infinite;/*Pievieno dzirksteļu animāciju tekstam*/
+    z-index: 4;
+  }
+  @keyframes sparkle {
+    0%, 100% {/*Teksts spīd sarkans un paliek normālā izmērā*/
+      text-shadow: 0 0 5px #ff0000, 0 0 10px #ff3333, 0 0 20px #ff6666;
+      transform: scale(1);
+    }
+    50% {/*Īslaicīgi mirdz dzeltenā krāsā un nedaudz palielinās*/
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900, 0 0 30px #ff6600;
+      transform: scale(1.1);
+      
+    }
+  }
+  canvas {
+    position: absolute;/*Aizklāj visu ekrānu*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;/*Padara canvu neinteraktīvu, nodrošinot, ka tas nebloķē klikšķus.*/
+    
+  }

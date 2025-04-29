@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Skaitļu spēle</title>
+
+
+</head>
+
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="vasara.html">Home</a>
+            <li><a href="10.12.html">Eglīte</a></li>
+           
+            
+           
+            </li>
+            <li><a href="poga.html">Poga</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li><a href="akmens.html">mini spēle</a></li>
+                <li><a href="daramo_darbu_saraksts.html">Darāmo darbun saraksts</a></li>
+                <li><a href="04.03.html">Saziņa</a>
+                <!-- Second Tier Drop Down -->
+                <ul>
+                    <li><a href="25.03.html">Viktorīna</a></li>
+                    <li><a href="21.01.html">Uzmini skaitli</a></li>
+                    <li><a href="15.04.html">Lieldienu spēle</a>
+                        <!-- Third Tier Drop Down -->
+                        <ul>
+                            
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+            </ul>
+            </li>
+            <li><a href="krasas.html">Krāsu maiņa</a></li>
+            <li><a href="atkartojums.html">Formas</a></li>
+            <li><a href="kalkulatros.html">Kalkulators</a></li>
+           
+            <li><a href="registracija.html">Reģistrēties</a></li>
+  
+        </ul>
+    </nav>
+  
+  </ul>
+  </nav>
+  </div>
+  
+  
+
+</ul>
+</nav>
+</div>
+
+    <h1 style="color: rgb(228, 77, 158);size: 25px;">Uzmini skaitli</h1>
+
+    <p>
+       Uzmini skaitli no 1 līdz 10.
+    </p>
+
+    <div class="form">
+        <label for="guessField">
+            Ievadi izvēlēto skaitli:
+        </label>
+
+        <input type="text" 
+               id="guessField" 
+               class="guessField">
+
+        <input type="submit" 
+               value="Ievadi skaitli" 
+               class="guessSubmit" 
+               id="submitguess">
+    </div>
+
+    <script type="text/javascript">
+
+     //Ģenerē skaitli
+        let y = Math.floor(Math.random() * 10 + 1);
+
+        // Counting the number of guesses
+        // made for correct Guess
+        let guess = 1;
+
+        document.getElementById("submitguess").onclick = function () {
+
+            // Number guessed by user    
+            let x = document.getElementById("guessField").value;
+
+            if (x == y) {
+                alert("Apsveicu!Tu atminēji skaitli ar "
+                    + guess + " mēģinājumiem! ");
+            }
+
+            /* If guessed number is greater than actual number*/
+            else if (x > y) {
+                guess++;
+                alert("Nepareizi!Mēģini mazāku skaitli!");
+            }
+            else {
+                guess++;
+                alert("Nav pareizi.Mēģini lielāku skaitli!")
+            }
+        }
+    </script>
+</body>
